@@ -1,0 +1,61 @@
+create database personinfo;
+use personinfo;
+create table personinfo(id int,fn varchar(10),city varchar(10),salary int,type varchar(10),rnk int);
+
+insert into personinfo values(11,'Hemal','surat',5000,'student',5);
+insert into personinfo values(12,'demi','london',6000,'teachher',3);
+insert into personinfo values(13,'shakira','uk',7000,'teachher',4);
+insert into personinfo values(14,'katy','canda',2000,'student',2);
+insert into  personinfo values(15,'cyn','texas',1000,'teacher',1);
+
+select * from personinfo;
+
+select * from personinfo
+where fn  ='Hemal';
+
+select *from personinfo
+order by rnk desc           
+limit 4,1;   
+
+select *from personinfo
+order by rnk desc           
+limit 2,1;   
+
+select * from personinfo limit 2;
+
+select min(salary) from personinfo;
+
+select min(salary) as maxsal from personinfo;
+
+select id,sum(salary)
+from personinfo
+group by id;
+
+create table infoo select * from personinfo;
+select * from infoo;
+
+
+show tables;
+select * from personinfo;
+select * from infoo;
+
+alter table infoo
+add Ln varchar(10);
+
+update infoo set ln ='patil' where id =11;
+update infoo set ln ='patel' where fn ='katy';
+update infoo set ln ='singh' where fn ='demi';
+update infoo set ln ='deo' where fn ='cyn';
+
+alter table personinfo
+add Ln varchar(10);
+update personinfo set ln ='patil' where id =11;
+
+update personinfo set ln ='abc' where id =12;
+update personinfo set ln ='def' where id =13;
+update personinfo set ln ='patel' where fn ='katy';
+
+
+select * from personinfo
+right join infoo
+on personinfo.ln=infoo.ln;

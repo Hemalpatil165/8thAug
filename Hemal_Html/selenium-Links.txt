@@ -1,0 +1,9 @@
+1.select optn from single select list box--https://www.facebook.com/
+
+2.Screen shot link--https://www.facebook.com/
+
+3.Iframe_1-switch to frame & switch to main page--https://www.w3schools.com/js/tryit.asp?filename=tryjs_myfirst
+
+4.Hidden Division pop up Link--https://www.flipkart.com/
+
+5.Alert Pop Link--https://demo.guru99.com/test/delete_customer.php
